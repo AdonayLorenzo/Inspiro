@@ -1,0 +1,27 @@
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    gap: 10px; /* Espaciado entre elementos */
+}
+
+.grid-item {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Alterna el tamaño de las imágenes */
+.grid-item.left {
+    grid-row: span 2; /* Ocupa dos filas */
+}
+
+.grid-item.right {
+    grid-row: span 1; /* Ocupa una fila */
+}
