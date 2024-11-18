@@ -47,6 +47,7 @@ body {
 .menu {
   position: absolute;
   top: 5em;
+  right: 0.5em;
   right: 0; /* Alinea completamente a la derecha */
   width: calc(50vw - 1px); /* Ajusta el ancho del submenú */
   overflow: hidden; /* Oculta el desbordamiento */
@@ -64,7 +65,7 @@ body {
   .menu-button-container {
     display: none;
     height: 100%;
-    margin-right: 1em;
+    margin-right: 2em;
     width: 30px;
     cursor: pointer;
     flex-direction: column;
@@ -139,7 +140,7 @@ body {
       width: 25vw; /* Ancho del submenú */
       opacity: 0; /* Inicialmente oculto */
       visibility: hidden; /* Inicialmente oculto */
-      transition: opacity 2s ease; /* Añade una transición */
+      transition: opacity 1.5s ease; /* Añade una transición */
       z-index: 3;
   }
 

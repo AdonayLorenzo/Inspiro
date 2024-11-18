@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "../../components/header/Header";
+import Footer from "../../components/footer/Footer";
 import ImageCarousel from "../../components/images/image-carousel";
 import NewsCarousel from "../../components/news/news-carousel";
 import "../landing/Landing.css"
@@ -95,8 +96,11 @@ const Landing: React.FC = () => {
                 </div>
             </section>
             <section>
+            <h1 className="Title">NEWS</h1>
+            <hr className="third-line"></hr>
             <NewsCarousel jsonPath="src\components\news\news.json" />
             </section>
+            <Footer></Footer>
         </>
     )
 }

@@ -51,7 +51,6 @@ const NewsCarousel: React.FC<NewsCarouselProps> = ({ jsonPath }) => {
                 {'<'}
             </button>
             <div className="news-carousel">
-                <h2>News</h2>
                 <div className="news-cards">
                     {newsBlocks[currentBlockIndex]?.map((item, index) => (
                         <div
