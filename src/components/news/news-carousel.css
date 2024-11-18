@@ -1,0 +1,53 @@
+/* NewsCarousel.css */
+
+.news-carousel {
+    margin: 2em;
+    font-family: Arial, sans-serif;
+}
+
+.news-carousel h2 {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+.news-cards {
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+}
+
+.news-card {
+    position: relative;
+    width: 20vw;
+    height: 30vh;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.news-card h3 {
+    font-size: 1em;
+    margin: 0;
+}
+
+.news-card p {
+    font-size: 0.8em;
+    margin: 0.5em 0 0;
+}
+
+.news-card .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
