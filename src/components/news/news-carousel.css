@@ -57,7 +57,7 @@
 .carousel-button {
     outline: none;
     position:absolute;
-    top: 140%;
+    top: 166%;
     transform: translateY(-50%);
     background-color: transparent; /* Fondo transparente al hacer clic */
     outline: none; /* Sin borde de enfoque */
