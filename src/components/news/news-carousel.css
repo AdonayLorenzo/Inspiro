@@ -3,6 +3,7 @@
 .news-carousel {
     margin: 2em;
     font-family: Arial, sans-serif;
+    align-items: center;
 }
 
 .news-carousel h2 {
@@ -55,20 +56,16 @@
     background-color: rgba(0, 0, 0, 0.5);
 }
 .carousel-button {
-    outline: none;
-    position:absolute;
-    top: 166%;
-    transform: translateY(-50%);
-    background-color: transparent; /* Fondo transparente al hacer clic */
-    outline: none; /* Sin borde de enfoque */
-    box-shadow: none;
-    color: rgb(0, 0, 0);
-    border: none;
-    font-size: 2em;
-    padding: 0em;
-    cursor: pointer;
-    z-index: 1;
-  }
+  top: 50%;
+  display: flex;
+  transform: translateY(-50%); /* Ajusta para centrar exactamente */
+  background-color: transparent; /* Fondo transparente */
+  color: rgb(0, 0, 0); /* Color del texto o ícono */
+  border: none; /* Sin borde */
+  font-size: 2em; /* Tamaño del ícono o texto del botón */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  z-index: 1; /* Se asegura de que esté por encima del contenido */
+}
   
   .carousel-button:hover {
     color:  rgb(82, 82, 82);
