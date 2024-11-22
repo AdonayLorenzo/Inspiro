@@ -42,6 +42,8 @@ const NewsCarousel: React.FC<NewsCarouselProps> = ({ jsonPath }) => {
 
     return (
         <div className="news-carousel-container">
+            
+            <div className="news-carousel">
             <button
                 onClick={handlePrevBlock}
                 className="carousel-button left"
@@ -50,7 +52,6 @@ const NewsCarousel: React.FC<NewsCarouselProps> = ({ jsonPath }) => {
             >
                 {'<'}
             </button>
-            <div className="news-carousel">
                 <div className="news-cards">
                     {newsBlocks[currentBlockIndex]?.map((item, index) => (
                         <div
@@ -64,14 +65,15 @@ const NewsCarousel: React.FC<NewsCarouselProps> = ({ jsonPath }) => {
                         </div>
                     ))}
                 </div>
-            </div>
-            <button
+                <button
                 onClick={handleNextBlock}
                 className="carousel-button right"
                 aria-label="Next Block"
             >
                 {'>'}
             </button>
+            </div>
+           
         </div>
     );
 };
