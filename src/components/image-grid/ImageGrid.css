@@ -1,27 +1,34 @@
-.image-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
-    gap: 10px; /* Espaciado entre elementos */
+/* Contenedor principal de Masonry */
+.masonry-grid {
+    display: flex;
+    margin-left: -10px; /* Espaciado negativo para compensar padding */
+    width: auto; /* Ajusta el ancho automáticamente */
 }
 
-.grid-item {
-    position: relative;
-    width: 100%;
+/* Columnas de Masonry */
+.masonry-grid-column {
+    padding-left: 10px; /* Espaciado entre columnas */
+    background-clip: padding-box;
+}
+
+/* Estilo para cada ítem dentro de las columnas */
+.masonry-item {
+    margin-bottom: 10px; /* Espaciado entre elementos */
+    border-radius: 8px; /* Bordes redondeados (opcional) */
     overflow: hidden;
 }
 
-.grid-item img {
+.masonry-item img {
     width: 100%;
-    height: auto;
     display: block;
-    object-fit: cover;
+    object-fit: cover; /* Asegura que las imágenes se ajusten bien */
+    border-radius: 8px; /* Coincide con el borde redondeado del contenedor */
 }
 
-/* Alterna el tamaño de las imágenes */
-.grid-item.left {
-    grid-row: span 2; /* Ocupa dos filas */
+/* Responsividad adicional (si deseas ajustar detalles en dispositivos pequeños) */
+@media (max-width: 768px) {
+    .masonry-item {
+        margin-bottom: 8px; /* Espaciado menor para pantallas pequeñas */
+    }
 }
 
-.grid-item.right {
-    grid-row: span 1; /* Ocupa una fila */
-}

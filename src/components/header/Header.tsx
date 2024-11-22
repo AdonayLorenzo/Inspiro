@@ -18,13 +18,18 @@ const Header: React.FC = () => {
                 <img src='../../../public/images/Logo.png' alt="Logo" />
             </div>
             <div className="search-bar">
-                <input 
-                    type="text" 
-                    placeholder="Buscar..." 
+                <input
+                    type="text"
+                    placeholder="Buscar..."
                     value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)} 
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    onKeyDown={(e) => {
+                        if (e.key === 'Enter' && searchTerm.trim() !== '') {
+                            handleSearch();
+                        }
+                    }}
                 />
-                <img 
+                <img
                     src='../../../public/images/lupa.png'
                     alt="Buscar"
                     onClick={handleSearch}
@@ -32,16 +37,16 @@ const Header: React.FC = () => {
                 />
             </div>
             <input id="menu-toggle" type="checkbox" />
-    <label className='menu-button-container' htmlFor="menu-toggle">
-    <div className='menu-button'></div>
-  </label>
-    <ul className="menu">
-      <li>One</li>
-      <li>Two</li>
-      <li>Three</li>
-      <li>Four</li>
-      <li>Five</li>
-    </ul>
+            <label className='menu-button-container' htmlFor="menu-toggle">
+                <div className='menu-button'></div>
+            </label>
+            <ul className="menu">
+                <li>One</li>
+                <li>Two</li>
+                <li>Three</li>
+                <li>Four</li>
+                <li>Five</li>
+            </ul>
         </header>
     );
 };
