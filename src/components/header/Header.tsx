@@ -2,15 +2,10 @@
 import React, { useState } from 'react';
 import './Header.css'; // Asegúrate de crear este archivo CSS
 import { useNavigate } from 'react-router-dom';
+import { useSearchContext } from '../../../public/SearchContext';
 
 const Header: React.FC = () => {
-    const [searchTerm, setSearchTerm] = useState('');
-    const navigate = useNavigate();
-
-    const handleSearch = () => {
-        navigate(`/Searched/${encodeURIComponent(searchTerm)}`);
-        console.log('Buscando:', searchTerm);
-    };
+    const { searchTerm, setSearchTerm, handleSearch } = useSearchContext();
 
     return (
         <header className="header">
