@@ -55,41 +55,52 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
 }
-.carousel-button {
-  top: 50%;
-  display: flex;
-  transform: translateY(-50%); /* Ajusta para centrar exactamente */
-  background-color: transparent; /* Fondo transparente */
-  color: rgb(0, 0, 0); /* Color del texto o ícono */
-  border: none; /* Sin borde */
-  font-size: 2em; /* Tamaño del ícono o texto del botón */
-  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-  z-index: 1; /* Se asegura de que esté por encima del contenido */
-}
-  
-  .carousel-button:hover {
-    color:  rgb(82, 82, 82);
-    background: rgb(255, 255, 255);
-    
-  }
 
-  .carousel-button:active {
-    background-color: transparent; /* Fondo transparente al hacer clic */
-    outline: none; /* Sin borde de enfoque */
-    box-shadow: none; /* Elimina cualquier sombra */
-  }
-  
-  /* Eliminar el borde azul y la sombra en estado focus (cuando se hace foco en el botón) */
-  .carousel-button:focus {
-    background-color: transparent; /* Fondo transparente en foco */
-    outline: none; /* Elimina el borde de enfoque */
-    box-shadow: none; /* Elimina cualquier sombra en foco */
-  }
-  
-  .carousel-button.left {
-    left: 0.25em;
-  }
-  
-  .carousel-button.right {
-    right: 0.25em;
-  }
+/* Contenedor del carrusel */
+.news-carousel-container {
+  position: relative;
+  width: 100%;
+}
+
+/* Botones del carrusel */
+.carousel-button {
+  position: absolute;
+  top: 50%; /* Centrado vertical */
+  transform: translateY(-50%);
+  background-color: transparent;
+  color: rgb(255, 255, 255);
+  border: none;
+  font-size: 2em;
+  cursor: pointer;
+  z-index: 10; /* Asegura que los botones estén por encima del contenido */
+}
+
+/* Botón izquierdo */
+.carousel-button.left {
+  left: 20px; /* Ajusta la posición al borde izquierdo del contenedor */
+}
+
+/* Botón derecho */
+.carousel-button.right {
+  right: 20px; /* Ajusta la posición al borde derecho del contenedor */
+}
+
+/* Hover para los botones */
+.carousel-button:hover {
+  color: rgb(82, 82, 82);
+  background: rgb(255, 255, 255);
+}
+
+/* Estado activo */
+.carousel-button:active {
+  background-color: transparent;
+  outline: none;
+  box-shadow: none;
+}
+
+/* Estado focus (sin borde azul) */
+.carousel-button:focus {
+  background-color: transparent;
+  outline: none;
+  box-shadow: none;
+}

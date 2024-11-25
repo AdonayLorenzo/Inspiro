@@ -15,7 +15,7 @@ const Header: React.FC = () => {
     return (
         <header className="header">
             <div className="logo">
-                <img src='../../../public/images/Logo.png' alt="Logo" />
+               <a href='/'><img src='../../../public/images/Logo.png' alt="Logo" /></a> 
             </div>
             <div className="search-bar">
                 <input
@@ -41,7 +41,7 @@ const Header: React.FC = () => {
                 <div className='menu-button'></div>
             </label>
             <ul className="menu">
-                <li>One</li>
+                <li><a className='li-a' href="/">HOME</a></li>
                 <li>Two</li>
                 <li>Three</li>
                 <li>Four</li>

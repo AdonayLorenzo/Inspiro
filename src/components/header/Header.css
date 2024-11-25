@@ -117,6 +117,12 @@ body {
     margin-top: 0px;
     transform: rotate(-405deg);
   }
+
+  .li-a{
+    text-decoration: none;
+    color: white;
+    text-align: center;
+  }
   
   @media (max-width:  2500px) {
     .menu-button-container {
@@ -162,8 +168,8 @@ body {
         transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
     }
     .menu > li {
-        display: right;
-        justify-content: right;
+        
+        justify-content: center;
         margin: 0;
         padding-top: 0.5em 0;
         padding-left: 0.5em 0;
@@ -180,6 +186,8 @@ body {
     @media (min-width: 2500px) {
     .menu {
         position: absolute;
+        justify-content: center;
+        text-align: center;
         top: 5em; /* Espacio del menú principal */
         left: 100%; /* Alinea el menú a la derecha del contenedor principal */
         flex-direction: column;
@@ -198,4 +206,25 @@ body {
         width: auto; /* Cambia a auto para que no ocupe todo el ancho */
     }
     }
+    
+}
+
+
+.menu {
+  display: flex; /* Asegúrate de usar flexbox para alinear elementos */
+  flex-direction: column; /* Asegúrate de que estén en una columna */
+  align-items: center; /* Centra horizontalmente los <li> */
+  justify-content: center; /* Centra verticalmente los <li> */
+  text-align: center; /* Asegúrate de centrar el texto */
+}
+
+.menu > li {
+  width: 100%; /* Opción para que ocupen todo el ancho del menú */
+  display: flex; /* Asegúrate de que flexbox esté activo */
+  align-items: center; /* Centra los elementos dentro del <li> */
+  justify-content: center; /* Centra horizontalmente los hijos del <li> */
+  padding: 0.5em 0; /* Ajusta el espacio interior si es necesario */
+  text-align: center; /* Centra el texto del enlace */
+  color: white;
+  background-color: #222; /* Fondo del elemento */
 }
