@@ -158,6 +158,11 @@ const Landing: React.FC = () => {
                 <hr className="third-line"></hr>
                 <NewsCarousel jsonPath="src\components\news\news.json" />
             </section>
+            <section className="need-inspiration">
+            <h1 className="Title">NEED INSPIRATION?</h1>
+            <hr className="fourth-line"></hr>
+            <ImageCarousel></ImageCarousel>
+            </section>
             <Footer></Footer>
         </>
     )

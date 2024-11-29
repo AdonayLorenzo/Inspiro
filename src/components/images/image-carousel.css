@@ -1,91 +1,101 @@
 /* image-carousel.module.css */
 
 .carouselContainer {
-    display: flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  max-width: 90vw;
+  margin: auto;
+}
+
+.carouselSlide {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carouselItem {
+  margin-left: 1em;
+  margin-right: 1em;
+  width: 15vw;
+  height: 15vw;
+  border: 2px solid black;
+}
+
+.carouselItem.active {
+  opacity: 1;
+}
+
+.carouselButton {
+  outline: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  /* Fondo transparente al hacer clic */
+  outline: none;
+  /* Sin borde de enfoque */
+  box-shadow: none;
+  color: rgb(0, 0, 0);
+  border: none;
+  font-size: 2em;
+  padding: 0em;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.carouselButton:hover {
+  color: rgb(82, 82, 82);
+  background: rgb(255, 255, 255);
+
+}
+
+.carouselButton:active {
+  background-color: transparent;
+  /* Fondo transparente al hacer clic */
+  outline: none;
+  /* Sin borde de enfoque */
+  box-shadow: none;
+  /* Elimina cualquier sombra */
+}
+
+/* Eliminar el borde azul y la sombra en estado focus (cuando se hace foco en el botón) */
+.carouselButton:focus {
+  background-color: transparent;
+  /* Fondo transparente en foco */
+  outline: none;
+  /* Elimina el borde de enfoque */
+  box-shadow: none;
+  /* Elimina cualquier sombra en foco */
+}
+
+.carouselButton.left {
+  left: -0.5em;
+}
+
+.carouselButton.right {
+  right: -0.5em;
+}
+
+@media (max-width: 768px) {
+  .carouselContainer {
     overflow: hidden;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    max-width: 90vw;
-    margin: auto;
   }
-  
-  .carouselSlide {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-  }
-  
+
   .carouselItem {
+    overflow: hidden;
     margin-left: 1em;
     margin-right: 1em;
-    width: 15vw;
-    height: 15vw;
+    width: 30vw;
+    height: 30vw;
     border: 2px solid black;
   }
-  
-  .carouselItem.active {
-    opacity: 1;
-  }
-  
-  .carouselButton {
-    outline: none;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: transparent; /* Fondo transparente al hacer clic */
-    outline: none; /* Sin borde de enfoque */
-    box-shadow: none;
-    color: rgb(0, 0, 0);
-    border: none;
-    font-size: 2em;
-    padding: 0em;
-    cursor: pointer;
-    z-index: 1;
-  }
-  
-  .carouselButton:hover {
-    color:  rgb(82, 82, 82);
-    background: rgb(255, 255, 255);
-    
-  }
 
-  .carouselButton:active {
-    background-color: transparent; /* Fondo transparente al hacer clic */
-    outline: none; /* Sin borde de enfoque */
-    box-shadow: none; /* Elimina cualquier sombra */
-  }
-  
-  /* Eliminar el borde azul y la sombra en estado focus (cuando se hace foco en el botón) */
-  .carouselButton:focus {
-    background-color: transparent; /* Fondo transparente en foco */
-    outline: none; /* Elimina el borde de enfoque */
-    box-shadow: none; /* Elimina cualquier sombra en foco */
-  }
-  
   .carouselButton.left {
-    left: -0.5em;
+    left: 0.7em;
   }
-  
+
   .carouselButton.right {
-    right: -0.5em;
+    right: 0.7em;
   }
-
-  @media (max-width: 768px) {
-    .carouselItem {
-      overflow: hidden;
-      margin-left: 1em;
-      margin-right: 1em;
-      width: 30vw;
-      height: 30vw;
-      border: 2px solid black;
-    }
-
-    .carouselButton.left {
-      left: 0.7em;
-    }
-    
-    .carouselButton.right {
-      right: 0.7em;
-    }
-  }
-  
+}

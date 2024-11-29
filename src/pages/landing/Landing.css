@@ -51,6 +51,15 @@ body {
     border: 1px solid #000000;
 }
 
+.fourth-line{
+    padding-top: 0;
+    margin-top: 0;
+    width: 155px;
+    height: 0px;
+    margin-left: 16.5vw;
+    border: 1px solid #000000;
+}
+
 .categoriesButtons {
     display: flex;
     flex-wrap: wrap;
@@ -101,6 +110,9 @@ body {
      z-index: 2;
  }
  
+ .need-inspiration{
+    margin-bottom: 3em;
+ }
  @media (max-width: 768px) {
     .categoryButton {
         width: 35vw;
