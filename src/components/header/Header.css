@@ -11,7 +11,7 @@ body {
     left: 0px;
     right: 0px;
     top: 0px;
-    background: #A87BC7;
+    background: #734a91;
     display: flex; /* Cambiado a flex para alinear elementos */
     align-items: center; /* Centra verticalmente los elementos */
 }

@@ -101,3 +101,28 @@ body {
      z-index: 2;
  }
  
+ @media (max-width: 768px) {
+    .categoryButton {
+        width: 35vw;
+        height: 3em; /* Aumenta la altura para acomodar imágenes de fondo */
+        background-size: cover; /* Asegura que la imagen cubra todo el botón */
+        background-position: center;
+        position: relative;
+        border: none;
+        color: white;
+        /* font-weight: bold; */
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2vw;
+        margin: 0.5em;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+
+    .categoryButton span {
+     position: relative;
+     z-index: 2;
+    }
+}

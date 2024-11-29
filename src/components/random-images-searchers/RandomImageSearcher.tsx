@@ -6,6 +6,7 @@ const imageList = [
     '../../../../public/images-to-show/3.jpg',
     '../../../../public/images-to-show/4.jpg',
     '../../../../public/images-to-show/5.jpg',
+    '../../../../public/images-to-show/6.jpg',
     
     // Agrega aquí los nombres de los demás archivos
   ];

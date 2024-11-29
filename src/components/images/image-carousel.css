@@ -2,6 +2,7 @@
 
 .carouselContainer {
     display: flex;
+    overflow: hidden;
     align-items: center;
     justify-content: center;
     position: relative;
@@ -67,5 +68,24 @@
   
   .carouselButton.right {
     right: -0.5em;
+  }
+
+  @media (max-width: 768px) {
+    .carouselItem {
+      overflow: hidden;
+      margin-left: 1em;
+      margin-right: 1em;
+      width: 30vw;
+      height: 30vw;
+      border: 2px solid black;
+    }
+
+    .carouselButton.left {
+      left: 0.7em;
+    }
+    
+    .carouselButton.right {
+      right: 0.7em;
+    }
   }
   

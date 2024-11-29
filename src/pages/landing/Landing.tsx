@@ -10,6 +10,11 @@ import { useSearchContext } from '../../../public/SearchContext';
 const Landing: React.FC = () => {
     const { setSearchTerm, handleSearch } = useSearchContext();
 
+    const handleButtonClick = (term: string) => {
+        setSearchTerm(term);  // Cambia el término de búsqueda
+        handleSearch();       // Realiza la búsqueda
+    };
+
     return (
 
         <>
@@ -22,26 +27,24 @@ const Landing: React.FC = () => {
                 <h1 className="Title">CATEGORIES</h1>
                 <hr className="second-line"></hr>
                 <div className="categoriesButtons">
-                    <button className="categoryButton" style={{
-                        backgroundImage: 'url(./category-buttons/cars.png)',
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center',
-                    }}
-                        onClick={() => {
-                            setSearchTerm('Cars'); // Define el término de búsqueda
-                            setTimeout(() => handleSearch(), 0);// Realiza la búsqueda
+                    <button
+                        className="categoryButton"
+                        style={{
+                            backgroundImage: 'url(./category-buttons/cars.png)',
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center',
                         }}
-                    ><span>cars</span></button>
+                        onClick={() => handleButtonClick('cars')} // Cambia el término de búsqueda y realiza la búsqueda
+                    >
+                        <span>cars</span>
+                    </button>
 
                     <button className="categoryButton" style={{
                         backgroundImage: 'url(./category-buttons/birds.png)',
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                     }}
-                    onClick={() => {
-                        setSearchTerm('Birds'); // Define el término de búsqueda
-                        setTimeout(() => handleSearch(), 0); // Realiza la búsqueda
-                    }}
+                        onClick={() => handleButtonClick('birds')}
                     ><span>birds</span></button>
 
                     <button className="categoryButton" style={{
@@ -49,10 +52,7 @@ const Landing: React.FC = () => {
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                     }}
-                    onClick={() => {
-                        setSearchTerm('Flowers'); // Define el término de búsqueda
-                        setTimeout(() => handleSearch(), 0); // Realiza la búsqueda
-                    }}
+                        onClick={() => handleButtonClick('flowers')}
                     ><span>flowers</span></button>
 
                     <button className="categoryButton" style={{
@@ -60,10 +60,7 @@ const Landing: React.FC = () => {
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                     }}
-                    onClick={() => {
-                        setSearchTerm('Mountains'); // Define el término de búsqueda
-                        setTimeout(() => handleSearch(), 0); // Realiza la búsqueda
-                    }}
+                        onClick={() => handleButtonClick('Mountains')}
                     ><span>Mountains</span></button>
 
                     <button className="categoryButton" style={{
@@ -71,10 +68,7 @@ const Landing: React.FC = () => {
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                     }}
-                    onClick={() => {
-                        setSearchTerm('Bikes'); // Define el término de búsqueda
-                        setTimeout(() => handleSearch(), 0); // Realiza la búsqueda
-                    }}
+                        onClick={() => handleButtonClick('Bikes')}
                     ><span>bikes</span></button>
 
                     <button className="categoryButton" style={{
@@ -82,10 +76,7 @@ const Landing: React.FC = () => {
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                     }}
-                    onClick={() => {
-                        setSearchTerm('Cities'); // Define el término de búsqueda
-                        setTimeout(() => handleSearch(), 0); // Realiza la búsqueda
-                    }}
+                        onClick={() => handleButtonClick('City')}
                     ><span>cities</span></button>
 
                     <button className="categoryButton" style={{
@@ -93,10 +84,7 @@ const Landing: React.FC = () => {
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                     }}
-                    onClick={() => {
-                        setSearchTerm('Anime'); // Define el término de búsqueda
-                        setTimeout(() => handleSearch(), 0); // Realiza la búsqueda
-                    }}
+                        onClick={() => handleButtonClick('Anime')}
                     ><span>anime</span></button>
 
                     <button className="categoryButton" style={{
@@ -104,10 +92,7 @@ const Landing: React.FC = () => {
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                     }}
-                    onClick={() => {
-                        setSearchTerm('Food'); // Define el término de búsqueda
-                        setTimeout(() => handleSearch(), 0); // Realiza la búsqueda
-                    }}
+                        onClick={() => handleButtonClick('Food')}
                     ><span>food</span></button>
 
                     <button className="categoryButton" style={{
@@ -115,10 +100,7 @@ const Landing: React.FC = () => {
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                     }}
-                    onClick={() => {
-                        setSearchTerm('Sports'); // Define el término de búsqueda
-                        setTimeout(() => handleSearch(), 0); // Realiza la búsqueda
-                    }}
+                        onClick={() => handleButtonClick('cars')}
                     ><span>sports</span></button>
 
                     <button className="categoryButton" style={{
@@ -126,10 +108,7 @@ const Landing: React.FC = () => {
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                     }}
-                    onClick={() => {
-                        setSearchTerm('Wallpapers'); // Define el término de búsqueda
-                        setTimeout(() => handleSearch(), 0); // Realiza la búsqueda
-                    }}
+                        onClick={() => handleButtonClick('Wallpaper')}
                     ><span>wallpapers</span></button>
 
                     <button className="categoryButton" style={{
@@ -137,10 +116,7 @@ const Landing: React.FC = () => {
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                     }}
-                    onClick={() => {
-                        setSearchTerm('Fire'); // Define el término de búsqueda
-                        setTimeout(() => handleSearch(), 0); // Realiza la búsqueda
-                    }}
+                        onClick={() => handleButtonClick('Fire')}
                     ><span>fire</span></button>
 
                     <button className="categoryButton" style={{
@@ -148,10 +124,7 @@ const Landing: React.FC = () => {
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                     }}
-                    onClick={() => {
-                        setSearchTerm('Ai Art'); // Define el término de búsqueda
-                        setTimeout(() => handleSearch(), 0); // Realiza la búsqueda
-                    }}
+                        onClick={() => handleButtonClick('AI Art')}
                     ><span>ai art</span></button>
 
                     <button className="categoryButton" style={{
@@ -159,10 +132,7 @@ const Landing: React.FC = () => {
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                     }}
-                    onClick={() => {
-                        setSearchTerm('Realistic Draws'); // Define el término de búsqueda
-                        setTimeout(() => handleSearch(), 0); // Realiza la búsqueda
-                    }}
+                        onClick={() => handleButtonClick('Realistic Drawing')}
                     ><span>realistic</span></button>
 
                     <button className="categoryButton" style={{
@@ -170,10 +140,7 @@ const Landing: React.FC = () => {
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                     }}
-                    onClick={() => {
-                        setSearchTerm('Space'); // Define el término de búsqueda
-                        setTimeout(() => handleSearch(), 0); // Realiza la búsqueda
-                    }}
+                        onClick={() => handleButtonClick('Space')}
                     ><span>space</span></button>
 
                     <button className="categoryButton" style={{
@@ -181,10 +148,7 @@ const Landing: React.FC = () => {
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                     }}
-                    onClick={() => {
-                        setSearchTerm('Insects'); // Define el término de búsqueda
-                        setTimeout(() => handleSearch(), 0); // Realiza la búsqueda
-                    }}
+                        onClick={() => handleButtonClick('Insects')}
                     ><span>insects</span></button>
 
                 </div>

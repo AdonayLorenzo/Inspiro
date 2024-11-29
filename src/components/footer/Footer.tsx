@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
                     <a href="#who-we-are">Who we are?</a>
                 </div>
                 <div className="footer-right">
-                    <a href="#login">Log-In</a>
+                    <a href="/Login">Log-In</a>
                     <a href="#register">Register</a>
                 </div>
             </div>

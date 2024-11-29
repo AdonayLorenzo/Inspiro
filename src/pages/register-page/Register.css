@@ -1,32 +1,40 @@
-.login-container {
+.register-form {
+
+    max-width: 50vw;
     margin-top: 15em;
     margin-bottom: 15em;
-    max-width: 50vw;
+    margin-left: auto;
     margin-right: auto;
-    margin-left:auto;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
   }
   
-  label {
+  .register-form label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
     text-align: left;
   }
   
-  .input-login {
+  .register-form input {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #000;
     border-radius: 4px;
-    margin-bottom: 3em;
   }
   
-  .login-button {
+  .born-date {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .born-date input {
+    width: calc(33.33% - 10px);
+  }
+  
+  .register-button {
     width: 100%;
     padding: 10px;
     background-color: #9f72b3;
@@ -36,14 +44,19 @@
     cursor: pointer;
   }
   
-  .login-button:hover {
+  .register-button:hover {
     background-color: #875f96;
   }
   
   .error-message {
     color: red;
     font-weight: bold;
-    margin-bottom: 2em;
-    
+    margin-bottom: 15px;
+  }
+  
+  .success-message {
+    color: green;
+    font-weight: bold;
+    margin-bottom: 15px;
   }
   

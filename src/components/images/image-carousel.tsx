@@ -3,29 +3,39 @@ import { getRandomImagePath } from '../random-images-searchers/RandomImageSearch
 import '../images/image-carousel.css';
 
 const Carousel: React.FC = () => {
-  const [imageBlocks, setImageBlocks] = useState<string[][]>([]); // Cada bloque contiene 4 imágenes
-  const [currentBlockIndex, setCurrentBlockIndex] = useState(0); // Índice del bloque actual
+  const [imageBlocks, setImageBlocks] = useState<string[][]>([]);
+  const [currentBlockIndex, setCurrentBlockIndex] = useState(0);
+  const [imagesPerBlock, setImagesPerBlock] = useState(4);
+
+  const detectImagesPerBlock = () => {
+    if (window.innerWidth <= 768) {
+      setImagesPerBlock(2);
+    } else {
+      setImagesPerBlock(4);
+    }
+  };
 
   useEffect(() => {
-    // Genera el primer bloque de 4 imágenes al montar el componente
-    addNewImageBlock();
-  }, []);
+    detectImagesPerBlock(); // Detectamos el tamaño de la pantalla al montar el componente
+    addNewImageBlock(); // Generamos el primer bloque de imágenes basado en el tamaño de pantalla
+    window.addEventListener('resize', detectImagesPerBlock); // Agregar listener para el cambio de tamaño
+    return () => {
+      window.removeEventListener('resize', detectImagesPerBlock); // Limpiar el listener al desmontar
+    };
+  }, []); 
 
   const addNewImageBlock = () => {
-    const newImages = Array.from(new Set(Array.from({ length: 4 }, () => getRandomImagePath())));
+    const newImages = Array.from(new Set(Array.from({ length: imagesPerBlock }, () => getRandomImagePath())));
     setImageBlocks((prevBlocks) => [...prevBlocks, newImages]);
   };
 
-  // Función para ir al bloque anterior
   const handlePrevBlock = () => {
     if (currentBlockIndex > 0) {
       setCurrentBlockIndex((prevIndex) => prevIndex - 1);
     }
   };
 
-  // Función para ir al siguiente bloque
   const handleNextBlock = () => {
-    // Si estamos en el último bloque visible, generamos un nuevo bloque
     if (currentBlockIndex === imageBlocks.length - 1) {
       addNewImageBlock();
     }
@@ -55,4 +65,3 @@ const Carousel: React.FC = () => {
 };
 
 export default Carousel;
-
