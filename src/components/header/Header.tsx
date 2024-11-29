@@ -37,9 +37,7 @@ const Header: React.FC = () => {
             <ul className="menu">
                 <li><a className='li-a' href="/">HOME</a></li>
                 <li><a className='li-a' href="/Login">LOGIN</a></li>
-                <li>Three</li>
-                <li>Four</li>
-                <li>Five</li>
+                <li><a className='li-a' href="/register">REGISTER</a></li>
             </ul>
         </header>
     );

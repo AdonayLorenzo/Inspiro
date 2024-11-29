@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
                 </div>
                 <div className="footer-right">
                     <a href="/Login">Log-In</a>
-                    <a href="#register">Register</a>
+                    <a href="/register">Register</a>
                 </div>
             </div>
         </footer>
