@@ -1,50 +1,48 @@
-# React + TypeScript + Vite
+# Inspiro
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Inspiro is a **Pinterest-like web application** created as a project for the *Development of Interfaces* course in the **Higher Vocational Training Program in Application Development (DAM)**. This project showcases the use of **React** and **TypeScript** to create a visually appealing and functional user interface for sharing and discovering images.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **User authentication:** Login and registration system using a local JSON file for user credentials.
+- **Dynamic image carousel:** Displays random images with a responsive layout.
+- **Category-based image search:** Predefined buttons for quick searches.
+- **Responsive design:** Works seamlessly on both desktop and mobile devices.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Installation
 
-- Configure the top-level `parserOptions` property like this:
+Follow these steps to set up the project locally:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### 1. Clone the repository
+Clone the repository using the following command:
+```bash
+git clone https://github.com/AdonayLorenzo/Inspiro.git
+cd Inspiro
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+### 2. Install dependencies
+The `node_modules` directory is not included in the repository. Install the necessary dependencies by running:
+```bash
+npm install
 ```
+
+### 3. Start the development server
+Run the following command to start the application in development mode:
+```bash
+npm run dev
+```
+The application will be available at http://localhost:5173 by default.
+
+### 4. Features
+- **User Authentication**: Register and log in using credentials stored in a JSON file (local storage).
+- **Responsive Design**: Optimized for both desktop and mobile devices.
+- **Category-Based Search**: Explore various categories like cars, birds, anime, etc.
+- **Dynamic Image Carousel**: Displays a dynamic carousel of random images that adjusts based on screen size.
+- **Future API Integration**: Placeholder for connecting to an API for dynamic data retrieval.
+
+This project is designed as a **Pinterest-like platform** for showcasing and searching for images, created for an educational purpose as part of a development course.
+
+
+
